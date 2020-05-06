@@ -1,6 +1,9 @@
 // C++ program to illustrate 
 // map::insert({key, element}) 
+#include <iostream> 
+#include <iterator> 
 #include <bits/stdc++.h> 
+
 using namespace std; 
 
 int main() 
