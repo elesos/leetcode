@@ -97,7 +97,7 @@ int main()
 	return 0; 
 } 
  */
-
+/* 
 // C++ function for illustration 
 // map::lower_bound() function 
 #include <bits/stdc++.h> 
@@ -120,22 +120,55 @@ int main()
 
 	// when 2 is present 
 	auto it = mp.lower_bound(2); 
-	cout << "The lower bound of key 2 is "; 
+	cout << "The lower bound of key 2 is: "; 
 	cout << (*it).first << " " << (*it).second << endl; 
 
 	// when 3 is not present 
 	// points to next greater after 3 
 	it = mp.lower_bound(3); 
-	cout << "The lower bound of key 3 is "; 
+	cout << "The lower bound of key 3 is: "; 
 	cout << (*it).first << " " << (*it).second; 
 
 	// when 6 exceeds 
+	//the iterator returned points to number of elements in the map as key and element=0.Öµ¹Ì¶¨Îª0
+	// 4 0
 	it = mp.lower_bound(6); 
-	cout << "\nThe lower bound of key 6 is "; 
+	cout << "\nThe lower bound of key 6 is: "; 
 	cout << (*it).first << " " << (*it).second; 
 	return 0; 
-} 
+}  */
 
+#include <bits/stdc++.h> 
+using namespace std; 
+  
+int main() 
+{ 
+    // initialize container 
+    map<int, int> mp; 
+  
+    // insert elements in random order 
+    mp.insert({ 12, 30 }); 
+    mp.insert({ 11, 10 }); 
+    mp.insert({ 15, 50 }); 
+    mp.insert({ 14, 40 }); 
+  
+    // when 11 is present 
+    auto it = mp.upper_bound(11); 
+    cout << "The upper bound of key 11 is "; 
+    cout << (*it).first << " " << (*it).second << endl; 
+  
+    // when 13 is not present 
+    it = mp.upper_bound(13); 
+    cout << "The upper bound of key 13 is "; 
+    cout << (*it).first << " " << (*it).second << endl; 
+  
+    // when 17 is exceeds the maximum key, so size 
+        // of mp is returned as key and value as 0. 
+    it = mp.upper_bound(17); 
+    cout << "The upper bound of key 17 is "; 
+    cout << (*it).first << " " << (*it).second; 
+    return 0; 
+} 
 
 /* #include <iostream> 
 #include <map> 
