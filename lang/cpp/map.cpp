@@ -1,4 +1,6 @@
 //https://www.geeksforgeeks.org/map-associative-containers-the-c-standard-template-library-stl/
+// map and pair
+
 
 // C++ program to illustrate 
 // map::insert({key, element}) 
@@ -138,7 +140,7 @@ int main()
 	return 0; 
 }  */
 
-#include <bits/stdc++.h> 
+/* #include <bits/stdc++.h> 
 using namespace std; 
   
 int main() 
@@ -152,7 +154,7 @@ int main()
     mp.insert({ 15, 50 }); 
     mp.insert({ 14, 40 }); 
   
-    // when 11 is present 
+    // when 11 is present 返回比它大的
     auto it = mp.upper_bound(11); 
     cout << "The upper bound of key 11 is "; 
     cout << (*it).first << " " << (*it).second << endl; 
@@ -168,9 +170,218 @@ int main()
     cout << "The upper bound of key 17 is "; 
     cout << (*it).first << " " << (*it).second; 
     return 0; 
-} 
+}  */
+
+
+//===================================pair===================================
+//CPP program to illustrate pair STL 
+/* #include <iostream> 
+#include <utility> 
+using namespace std; 
+
+int main() 
+{ 
+	pair <int, char> PAIR1 ; 
+
+	PAIR1.first = 100; 
+	PAIR1.second = 'G' ; 
+
+	cout << PAIR1.first << " " ; 
+	cout << PAIR1.second << endl ; 
+
+	return 0; 
+}  */
+
+//CPP program to illustrate Initializing of pair STL 
+/* #include <iostream> 
+#include <utility> 
+using namespace std; 
+
+int main() 
+{ 
+	pair <string,double> PAIR2 ("GeeksForGeeks", 1.23); 
+
+	cout << PAIR2.first << " " ; 
+	cout << PAIR2.second << endl ; 
+	
+return 0; 
+}  */
+
+
+//CPP program to illustrate auto-initializing of pair STL 
+/* #include <iostream> 
+#include <utility> 
+
+using namespace std; 
+
+int main() 
+{ 
+	pair <int, double> PAIR1 ; 
+	pair <string, char> PAIR2 ; 
+
+	cout << PAIR1.first ; //it is initialised to 0 
+	cout << PAIR1.second ; //it is initialised to 0 
+
+	cout << " "; 
+
+	cout << PAIR2.first ; //it prints nothing i.e NULL 
+	cout << PAIR2.second ; //it prints nothing i.e NULL 
+
+	return 0; 
+}  */
 
 /* #include <iostream> 
+#include <utility> 
+using namespace std; 
+
+int main() 
+{ 
+	pair <int, char> PAIR1 ; 
+	pair <string, double> PAIR2 ("GeeksForGeeks", 1.23) ; 
+	pair <string, double> PAIR3 ; 
+
+	PAIR1.first = 100; 
+	PAIR1.second = 'G' ; 
+
+	PAIR3 = make_pair ("GeeksForGeeks is Best",4.56); 
+
+	cout << PAIR1.first << " " ; 
+	cout << PAIR1.second << endl ; 
+
+	cout << PAIR2.first << " " ; 
+	cout << PAIR2.second << endl ; 
+
+	cout << PAIR3.first << " " ; 
+	cout << PAIR3.second << endl ; 
+
+	return 0; 
+} 
+ */
+
+//CPP code to illustrate operators in pair 
+/* #include <iostream> 
+#include<utility> 
+using namespace std; 
+
+int main() 
+{ 
+	pair<int, int>pair1 = make_pair(1, 12); //TODO 居然没有空格？
+	pair<int, int>pair2 = make_pair(9, 12); 
+
+
+	cout << (pair1 == pair2) << endl; 
+	cout << (pair1 != pair2) << endl; 
+	cout << (pair1 >= pair2) << endl; 
+	cout << (pair1 <= pair2) << endl; 
+	cout << (pair1 > pair2) << endl; 
+	cout << (pair1 < pair2) << endl; 
+
+	return 0; 
+} 
+
+ */
+
+ 
+
+//================erase
+// C++ program to illustrate 
+// map::erase(key) 
+/* #include <bits/stdc++.h> 
+using namespace std; 
+
+int main() 
+{ 
+
+	// initialize container 
+	map<int, int> mp; 
+
+	// insert elements in random order 
+	mp.insert({ 2, 30 }); 
+	mp.insert({ 1, 40 }); 
+	mp.insert({ 3, 60 }); 
+	mp.insert({ 5, 50 }); 
+
+	// prints the elements 
+	cout << "The map before using erase() is : \n"; 
+	cout << "KEY\tELEMENT\n"; 
+	//TODO auto
+	for (auto itr = mp.begin(); itr != mp.end(); ++itr) { 
+		cout << itr->first 
+			<< '\t' << itr->second << '\n'; 
+	} 
+	
+	
+	
+	
+
+	// function to erase given keys 
+	mp.erase(1); 
+	mp.erase(2); 
+
+	// prints the elements 
+	cout << "\nThe map after applying erase() is : \n"; 
+	cout << "KEY\tELEMENT\n"; 
+	for (auto itr = mp.begin(); itr != mp.end(); ++itr) { 
+		cout << itr->first 
+			<< '\t' << itr->second << '\n'; 
+	} 
+	return 0; 
+} 
+ */
+
+
+// C++ program to illustrate 
+// map::erase() 
+/* #include <bits/stdc++.h> 
+using namespace std; 
+
+int main() 
+{ 
+
+	// initialize container 
+	map<int, int> mp; 
+	// insert elements in random order 
+	mp.insert({ 2, 30 }); 
+	mp.insert({ 1, 40 }); 
+	mp.insert({ 3, 60 }); 
+	mp.insert({ 2, 20 }); 
+	mp.insert({ 5, 50 }); 
+
+	// prints the elements 
+	cout << "The map before using erase() is : \n"; 
+	cout << "KEY\tELEMENT\n"; 
+	for (auto itr = mp.begin(); itr != mp.end(); ++itr) { 
+		cout << itr->first 
+			<< '\t' << itr->second << '\n'; 
+	} 
+
+	// function to erase in a given range 
+	// find() returns the iterator reference to 
+	// the position where the element is 
+	auto it1 = mp.find(2); 
+	auto it2 = mp.find(5); 
+	mp.erase(it1, it2);   //5不会删除
+
+	// prints the elements 
+	cout << "\nThe map after applying erase() is : \n"; 
+	cout << "KEY\tELEMENT\n"; 
+	for (auto itr = mp.begin(); itr != mp.end(); ++itr) { 
+		cout << itr->first 
+			<< '\t' << itr->second << '\n'; 
+	} 
+	return 0; 
+} 
+
+
+ */
+
+
+
+
+
+/* 
+
+#include <iostream> 
 #include <map> 
 #include <iterator> 
 
@@ -186,11 +397,13 @@ int main()
 	gquiz1.insert(pair <int, int> (3, 60)); 
 	gquiz1.insert(pair <int, int> (4, 20)); 
 	gquiz1.insert(pair <int, int> (5, 50)); 
+	
+	
 	gquiz1.insert(pair <int, int> (6, 50)); 
 	gquiz1.insert(pair <int, int> (6, 10)); 
 
-	// printing multimap gquiz1 
-	multimap <int, int> :: iterator itr; 
+	// printing 
+	multimap <int, int> :: iterator itr; 	//TODO 
 	cout << "\nThe multimap gquiz1 is : \n"; 
 	cout << "\tKEY\tELEMENT\n"; 
 	for (itr = gquiz1.begin(); itr != gquiz1.end(); ++itr) 
@@ -199,6 +412,9 @@ int main()
 			<< '\t' << itr->second << '\n'; 
 	} 
 	cout << endl; 
+	
+	
+	
 
 	// assigning the elements from gquiz1 to gquiz2 
 	multimap <int, int> gquiz2(gquiz1.begin(),gquiz1.end()); 
@@ -212,6 +428,12 @@ int main()
 			<< '\t' << itr->second << '\n'; 
 	} 
 	cout << endl; 
+	
+	
+	
+	
+	
+	
 
 	// remove all elements up to element with value 30 in gquiz2 
 	cout << "\ngquiz2 after removal of elements less than key=3 : \n"; 
@@ -223,6 +445,12 @@ int main()
 			<< '\t' << itr->second << '\n'; 
 	} 
 
+	
+	
+	
+	
+	
+	
 	// remove all elements with key = 4 
 	int num; 
 	num = gquiz2.erase(4); 
@@ -236,12 +464,16 @@ int main()
 	} 
 
 	cout << endl; 
+	
+	
+	
 
 	//lower bound and upper bound for multimap gquiz1 key = 5 
 	cout << "gquiz1.lower_bound(5) : " << "\tKEY = "; 
 	cout << gquiz1.lower_bound(5)->first << '\t'; 
 	cout << "\tELEMENT = " << gquiz1.lower_bound(5)->second << endl; 
-	cout << "gquiz1.upper_bound(5) : " << "\tKEY = "; 
+	
+	cout << "gquiz1.upper_bound(5) : " << "\tKEY = "; //返回比它大的
 	cout << gquiz1.upper_bound(5)->first << '\t'; 
 	cout << "\tELEMENT = " << gquiz1.upper_bound(5)->second << endl; 
 
@@ -285,6 +517,10 @@ int main()
     } 
     cout << endl; 
   
+  
+  
+  
+  
     // assigning the elements from gquiz1 to gquiz2 
     map<int, int> gquiz2(gquiz1.begin(), gquiz1.end()); 
   
@@ -297,13 +533,16 @@ int main()
              << '\t' << itr->second << '\n'; 
     } 
     cout << endl; 
+	
+	
+	
   
     // remove all elements up to 
     // element with key=3 in gquiz2 
     cout << "\ngquiz2 after removal of"
             " elements less than key=3 : \n"; 
     cout << "\tKEY\tELEMENT\n"; 
-    gquiz2.erase(gquiz2.begin(), gquiz2.find(3)); 
+    gquiz2.erase(gquiz2.begin(), gquiz2.find(3)); //不包括3
     for (itr = gquiz2.begin(); itr != gquiz2.end(); ++itr) { 
         cout << '\t' << itr->first 
              << '\t' << itr->second << '\n'; 
@@ -321,6 +560,11 @@ int main()
     } 
   
     cout << endl; 
+	
+	
+	
+	
+	
   
     // lower bound and upper bound for map gquiz1 key = 5 
     cout << "gquiz1.lower_bound(5) : "
@@ -335,5 +579,32 @@ int main()
          << gquiz1.upper_bound(5)->second << endl; 
   
     return 0; 
-}  */
+} 
+ */
 
+//////////////////////////////////////////////unordered_map=============
+// C++ program to demonstrate functionality of unordered_map 
+#include <iostream> 
+#include <unordered_map> 
+using namespace std; 
+
+int main() 
+{ 
+	// Declaring umap to be of <string, int> type 
+	// key will be of string type and mapped value will 
+	// be of double type 
+	unordered_map<string, int> umap; 
+
+	// inserting values by using [] operator 
+	umap["GeeksforGeeks"] = 10; 
+	umap["Practice"] = 20; 
+	umap["Contribute"] = 30; 
+
+	// Traversing an unordered map 
+	for (auto x : umap) 
+	    cout << x.first << " " << x.second << endl; 
+
+} 
+
+ 
+ 
