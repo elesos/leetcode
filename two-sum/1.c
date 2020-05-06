@@ -5,6 +5,8 @@
  *
  * @note nothing 
  */
+ 
+//自已第一版实现的垃圾代码
 int* twoSum(int* nums, int numsSize, int target, int* returnSize){
     *returnSize = 0;
     int arr_len = 2;
@@ -29,5 +31,6 @@ int* twoSum(int* nums, int numsSize, int target, int* returnSize){
     return res_arr;
     
 }
+
 
 
