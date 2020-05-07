@@ -51,7 +51,7 @@ int main()
 
 	cout << "Size : " << g1.size(); 
 	cout << "\nCapacity : " << g1.capacity(); 
-	cout << "\nMax_Size : " << g1.max_size(); 
+	cout << "\nMax_Size : " << g1.max_size() << endl; 
 
 	for (auto it = g1.begin(); it != g1.end(); it++) 
 		cout << *it << " "; 
@@ -61,8 +61,9 @@ int main()
 	g1.resize(4); 
 
 	// prints the vector size after resize() 
-	cout << "\nSize : " << g1.size(); 
+	cout << "\nSize : " << g1.size() << endl; 
 
+	
 	for (auto it = g1.begin(); it != g1.end(); it++) 
 		cout << *it << " "; 
 	
