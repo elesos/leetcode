@@ -63,7 +63,7 @@ int main()
 	// prints the vector size after resize() 
 	cout << "\nSize : " << g1.size() << endl; 
 
-	
+	//少了最后一个元素
 	for (auto it = g1.begin(); it != g1.end(); it++) 
 		cout << *it << " "; 
 	
@@ -80,6 +80,9 @@ int main()
 	cout << "\nVector elements are: "; 
 	for (auto it = g1.begin(); it != g1.end(); it++) 
 		cout << *it << " "; 
+	
+	cout << "\nCapacity : " << g1.capacity(); 
+	cout << "\nMax_Size : " << g1.max_size() << endl; 
 
 	return 0; 
 } 
