@@ -279,7 +279,7 @@ int main()
 	vector<int> myvector{ 1, 2, 3, 4, 5 }; 
 	vector<int>::iterator it1, it2; 
 
-	it1 = myvector.begin(); 
+	it1 = myvector.begin() + 1; 
 	it2 = myvector.end(); 
 	
 
@@ -288,6 +288,7 @@ int main()
 	// Printing the Vector 
 	for (auto it = myvector.begin(); it != myvector.end(); ++it) 
 		cout << ' ' << *it; 
+	cout << endl;
 	return 0;  // 4 5
 } 
 
