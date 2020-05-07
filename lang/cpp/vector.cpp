@@ -270,7 +270,7 @@ int main()
 } 
  */
 
-#include <iostream> 
+/* #include <iostream> 
 #include <vector> 
 using namespace std; 
 
@@ -291,4 +291,256 @@ int main()
 	cout << endl;
 	return 0;  // 4 5
 } 
+ */
+ 
+// CPP program to illustrate 
+// Application of erase() function 
+/* #include <iostream> 
+#include <vector> 
+using namespace std; 
 
+int main() 
+{ 
+	vector<int> myvector{ 1, 2, 3, 4, 5, 6, 7, 8, 9 }; 
+
+	for (auto i = myvector.begin(); i != myvector.end(); ++i) { 
+		if (*i % 2 == 0) { 
+			myvector.erase(i); 
+			i--; //TODO
+		} 
+	} 
+
+	// Printing the vector 
+	for (auto it = myvector.begin(); it != myvector.end(); ++it) 
+		cout << ' ' << *it; 
+	return 0; 
+} 
+ */
+//=====================at==
+// CPP program to illustrate 
+// Implementation of at() function 
+/* #include <iostream> 
+#include <vector> 
+using namespace std; 
+
+int main() 
+{ 
+	vector<int> myvector; 
+	myvector.push_back(3); 
+	myvector.push_back(4); 
+	myvector.push_back(1); 
+	myvector.push_back(7); 
+	myvector.push_back(3); 
+	cout << myvector.at(3); 
+	return 0; 
+} 
+ */
+// CPP program to illustrate 
+// Application of at() function 
+/* #include <iostream> 
+#include <vector> 
+using namespace std; 
+
+int main() 
+{ 
+	vector<int> myvector; 
+	myvector.push_back(1); 
+	myvector.push_back(2); 
+	myvector.push_back(3); 
+	myvector.push_back(4); 
+	myvector.push_back(5); 
+	myvector.push_back(6); 
+	myvector.push_back(7); 
+	myvector.push_back(8); 
+	myvector.push_back(9); 
+	// vector becomes 1, 2, 3, 4, 5, 6, 7, 8, 9 
+
+	for (int i = 0; i < myvector.size(); i += 2) { 
+
+		cout << myvector.at(i); 
+		cout << " "; 
+	} 
+
+	return 0; 
+} 
+ */
+//==========================swap
+// same type and same size 
+
+// CPP program to illustrate 
+// Implementation of swap() function 
+/* #include <iostream> 
+#include <vector> 
+using namespace std; 
+
+int main() 
+{ 
+	// vector container declaration 
+	vector<int> myvector1{ 1, 2, 3, 4 }; 
+	vector<int> myvector2{ 3, 5, 7, 9 }; 
+
+	// using swap() function to swap 
+	// elements of vector 
+	myvector1.swap(myvector2); 
+
+	// printing the first vector 
+	cout << "myvector1 = "; 
+	for (auto it = myvector1.begin(); it < myvector1.end(); ++it) 
+		cout << *it << " "; 
+
+	// printing the second vector 
+	cout << endl << "myvector2 = "; 
+	for (auto it = myvector2.begin(); it < myvector2.end(); ++it) 
+		cout << *it << " "; 
+	return 0; 
+}  */
+
+
+// C++ program to illustrate the 
+// vector::emplace() function 
+// insertion at thefront 
+/* #include <bits/stdc++.h> 
+using namespace std; 
+
+int main() 
+{ 
+	vector<int> vec = { 10, 20, 30 }; 
+
+	// insert element by emplace function 
+	// at front 
+	auto it = vec.emplace(vec.begin(), 15); 
+
+	// print the elements of the vector 
+	cout << "The vector elements are: "; 
+	for (auto it = vec.begin(); it != vec.end(); ++it) 
+		cout << *it << " "; //15 10 20 30
+
+	return 0; 
+}  */
+
+// C++ program to illustrate the 
+// vector::emplace() function 
+// insertion at the end 
+/* #include <bits/stdc++.h> 
+using namespace std; 
+
+int main() 
+{ 
+	vector<int> vec = { 10, 20, 30 }; 
+
+	// insert element by emplace function 
+	// at the end 
+	auto it = vec.emplace(vec.end(), 16); 
+
+	// print the elements of the vector 
+	cout << "The vector elements are: "; 
+	for (auto it = vec.begin(); it != vec.end(); ++it) 
+		cout << *it << " "; 
+
+	return 0; 
+} 
+ */
+
+ // C++ program to illustrate the 
+// vector::emplace() function 
+// insertion at the middle 
+/* #include <bits/stdc++.h> 
+using namespace std; 
+
+int main() 
+{ 
+	vector<int> vec = { 10, 20, 30 }; 
+
+	// insert element by emplace function 
+	// in the middle 
+	auto it = vec.emplace(vec.begin() + 2, 16); //10 20 16 30
+
+	// print the elements of the vector 
+	cout << "The vector elements are: "; 
+	for (auto it = vec.begin(); it != vec.end(); ++it) 
+		cout << *it << " "; //TODO
+
+	return 0; 
+} 
+ */
+ 
+// INTEGER VECTOR EXAMPLE 
+// CPP program to illustrate 
+// Implementation of emplace() function 
+/* #include <iostream> 
+#include <vector> 
+using namespace std; 
+
+int main() 
+{ 
+	vector<int> myvector; 
+	myvector.emplace_back(1); 
+	myvector.emplace_back(2); 
+	myvector.emplace_back(3); 
+	myvector.emplace_back(4); 
+	myvector.emplace_back(5); 
+	myvector.emplace_back(6); 
+	// vector becomes 1, 2, 3, 4, 5, 6 
+
+	// printing the vector 
+	for (auto it = myvector.begin(); it != myvector.end(); ++it) 
+		cout << ' ' << *it; 
+
+	return 0; 
+	
+}  */
+
+
+// STRING VECTOR EXAMPLE 
+// CPP program to illustrate 
+// Implementation of emplace() function 
+/* #include <iostream> 
+#include <vector> 
+#include <string> 
+using namespace std; 
+
+int main() 
+{ 
+	// vector declaration 
+	vector<string> myvector; 
+	myvector.emplace_back("This"); 
+	myvector.emplace_back("is"); 
+	myvector.emplace_back("a"); 
+	myvector.emplace_back("computer science"); 
+	myvector.emplace_back("portal"); 
+
+	// vector becomes This, is, a computer science, portal 
+
+	// printing the vector 
+	for (auto it = myvector.begin(); it != myvector.end(); ++it) 
+		cout << ' ' << *it; 
+
+	return 0; 
+	
+}  */
+
+
+// CHARACTER VECTOR EXAMPLE 
+// CPP program to illustrate 
+// Implementation of emplace() function 
+#include <iostream> 
+#include <vector> 
+using namespace std; 
+
+int main() 
+{ 
+	vector<char> myvector; 
+	myvector.emplace_back('a'); 
+	myvector.emplace_back('c'); 
+	myvector.emplace_back('x'); 
+	myvector.emplace_back('y'); 
+	myvector.emplace_back('z'); 
+	// vector becomes a, c, x, y, z 
+
+	// printing the vector 
+	for (auto it = myvector.begin(); it != myvector.end(); ++it) 
+		cout << ' ' << *it; 
+
+	return 0; 
+	
+} 
