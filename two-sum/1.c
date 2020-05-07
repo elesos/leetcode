@@ -6,7 +6,7 @@
  * @note nothing 
  */
  
-//自已第一版实现的垃圾代码
+//自已第一版实现的垃圾代码， 有勇无谋 。。。
 int* twoSum(int* nums, int numsSize, int target, int* returnSize){
     *returnSize = 0;
     int arr_len = 2;

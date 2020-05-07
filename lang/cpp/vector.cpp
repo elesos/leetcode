@@ -548,7 +548,7 @@ int main()
  
 // CPP program to illustrate 
 // Application of emplace_back function 
-#include <iostream> 
+/* #include <iostream> 
 #include <vector> 
 using namespace std; 
 
@@ -570,3 +570,64 @@ int main()
 	cout << myvector.size() << endl;
 	return 0; 
 } 
+ */
+ 
+ 
+// C++ code to demonstrate difference between 
+// emplace_back and insert_back 
+/* #include<bits/stdc++.h> 
+using namespace std; 
+	
+int main() 
+{ 
+	// declaring priority queue 
+	vector<pair<char, int>> vect; 
+		
+	// using emplace() to insert pair in-place 
+	vect.emplace_back('a', 24); 
+		
+	// Below line would not compile 
+	// vect.push_back('b', 25);	 
+		
+	// using push_back() to insert 
+	vect.push_back(make_pair('b', 25));	 
+		
+	// printing the vector 
+	for (int i=0; i<vect.size(); i++) 
+		cout << vect[i].first << " " << vect[i].second 	<< endl; 
+
+	return 0; 
+} 
+ */
+ 
+ 
+// C++ code to demonstrate difference between 
+// emplace and insert 
+/* #include<bits/stdc++.h> 
+using namespace std; 
+
+int main() 
+{ 
+	// declaring map 
+	multiset<pair<char, int>> ms; 
+	
+	// using emplace() to insert pair in-place 
+	ms.emplace('a', 24); 
+	
+	// Below line would not compile 
+	// ms.insert('b', 25);	 
+	
+	// using emplace() to insert pair in-place 
+	ms.insert(make_pair('b', 25));	 
+	
+	// printing the multiset 
+	for (auto it = ms.begin(); it != ms.end(); ++it) 
+		cout << " " << (*it).first << " "
+			<< (*it).second << endl; 
+
+	return 0; 
+} 
+ */
+ 
+ 
+ 
