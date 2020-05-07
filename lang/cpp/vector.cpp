@@ -523,7 +523,7 @@ int main()
 // CHARACTER VECTOR EXAMPLE 
 // CPP program to illustrate 
 // Implementation of emplace() function 
-#include <iostream> 
+/* #include <iostream> 
 #include <vector> 
 using namespace std; 
 
@@ -539,8 +539,34 @@ int main()
 
 	// printing the vector 
 	for (auto it = myvector.begin(); it != myvector.end(); ++it) 
-		cout << ' ' << *it; 
+		cout << ' ' << *it; //a c x y z
 
 	return 0; 
 	
+} 
+ */
+ 
+// CPP program to illustrate 
+// Application of emplace_back function 
+#include <iostream> 
+#include <vector> 
+using namespace std; 
+
+int main() 
+{ 
+	//int count = 0; 
+	vector<int> myvector; 
+	myvector.emplace_back(1); 
+	myvector.emplace_back(2); 
+	myvector.emplace_back(3); 
+	myvector.emplace_back(4); 
+	myvector.emplace_back(5); 
+	myvector.emplace_back(6); 
+	// while (!myvector.empty()) { 
+		// count++; 
+		// myvector.pop_back(); 
+	// } 
+	// cout << count; 
+	count << myvector.size() << endl;
+	return 0; 
 } 
