@@ -567,6 +567,6 @@ int main()
 		// myvector.pop_back(); 
 	// } 
 	// cout << count; 
-	count << myvector.size() << endl;
+	cout << myvector.size() << endl;
 	return 0; 
 } 
