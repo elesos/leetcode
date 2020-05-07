@@ -37,7 +37,7 @@ int main()
 //=============================Capacity===================
 // C++ program to illustrate the 
 // capacity function in vector 
-#include <iostream> 
+/* #include <iostream> 
 #include <vector> 
 
 using namespace std; 
@@ -50,7 +50,7 @@ int main()
 		g1.push_back(i); 
 
 	cout << "Size : " << g1.size(); 
-	cout << "\nCapacity : " << g1.capacity(); 
+	cout << "\nCapacity : " << g1.capacity();  //8
 	cout << "\nMax_Size : " << g1.max_size() << endl; 
 
 	for (auto it = g1.begin(); it != g1.end(); it++) 
@@ -81,11 +81,38 @@ int main()
 	for (auto it = g1.begin(); it != g1.end(); it++) 
 		cout << *it << " "; 
 	
-	cout << "\nCapacity : " << g1.capacity(); 
+	cout << "\nCapacity : " << g1.capacity();  //4
 	cout << "\nMax_Size : " << g1.max_size() << endl; 
 
 	return 0; 
 } 
+ */
 
+ // C++ program to illustrate the 
+// element accesser in vector 
+#include <bits/stdc++.h> 
+using namespace std; 
+
+int main() 
+{ 
+	vector<int> g1; 
+
+	for (int i = 1; i <= 10; i++) 
+		g1.push_back(i * 10); 
+
+	cout << "\nReference operator [g] : g1[2] = " << g1[2]; 
+
+	cout << "\nat : g1.at(4) = " << g1.at(4); 
+
+	cout << "\nfront() : g1.front() = " << g1.front(); 
+
+	cout << "\nback() : g1.back() = " << g1.back(); 
+
+	// pointer to the first element 
+	int* pos = g1.data(); 
+
+	cout << "\nThe first element is " << *pos; 
+	return 0; 
+} 
 
 
