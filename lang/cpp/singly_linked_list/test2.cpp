@@ -99,7 +99,7 @@ int main()
 	/* Create a loop for testing */
 	head->next->next->next->next->next = head->next; 
 
-	cout << countNodesinLoop(head) << endl; 
+	cout << countNodesinLoop2(head) << endl; 
 
 	return 0; 
 } 
