@@ -448,3 +448,44 @@ void printMiddle(Node *head)
         printf("The middle element is [%d]\n\n", slow_ptr->data);  
     }  
 }  
+
+/* Counts the no. of occurrences of a node  
+(search_for) in a linked list (head)*/
+int count(Node* head, int search_for) { 
+    Node* current = head; 
+    int count = 0; 
+    while (current != NULL) { 
+        if (current->data == search_for) 
+            count++; 
+        current = current->next; 
+    } 
+    return count; 
+} 
+
+
+//检查有没有形成回环
+// Returns true if there is a loop in linked list 
+// else returns false. 
+bool detectLoop(Node* h) 
+{ 
+    unordered_set<Node*> s; 
+    while (h != NULL) { 
+        // If this node is already present 
+        // in hashmap it means there is a cycle 
+        // (Because you we encountering the 
+        // node for the second time). 
+        if (s.find(h) != s.end()) // 找到了
+            return true; 
+  
+        // If we are seeing the node for 
+        // the first time, insert it in hash 
+        s.insert(h); 
+  
+        h = h->next; 
+    } 
+  
+    return false; 
+} 
+
+
+//Find length of loop in linked list

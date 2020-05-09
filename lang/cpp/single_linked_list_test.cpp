@@ -82,8 +82,7 @@ void printMiddle(struct node *head)
 	int count = 0; 
 	struct node *mid = head; 
 
-	while (head != NULL) 
-	{ 
+	while (head != NULL) { 
 		/* update mid, when 'count' is odd number */
 		if (count & 1) 
 			mid = mid->next; 
@@ -122,7 +121,7 @@ void printList(struct node *ptr)
 		printf("%d->", ptr->data); 
 		ptr = ptr->next; 
 	} 
-	//printf("NULL\n"); 
+	printf("NULL\n"); 
 } 
 
 
