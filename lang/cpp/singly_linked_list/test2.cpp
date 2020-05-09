@@ -62,7 +62,7 @@ int countNodesinLoop2(struct Node *h)
         // node for the second time). 
         if (s.find(h) != s.end()){
 			
-			return index - s[h] + 1; 
+			return index - s[h]; 
 		} // 找到了
            
   
