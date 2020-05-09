@@ -48,6 +48,34 @@ int countNodesinLoop(struct Node *list)
 	return 0; 
 } 
 
+int countNodesinLoop2(struct Node *h) 
+{ 
+	
+	unordered_set<Node*, int> s; 
+	int index = 0;
+    while (h != NULL) { 
+        // If this node is already present 
+        // in hashmap it means there is a cycle 
+        // (Because you we encountering the 
+        // node for the second time). 
+        if (s.find(h) != s.end()){
+			
+			return index - s[h] + 1; 
+		} // 找到了
+           
+  
+        // If we are seeing the node for 
+        // the first time, insert it in hash 
+        s.insert({h, index++}); 
+  
+        h = h->next; 
+    } 
+  
+	
+	
+	return 0; 
+} 
+
 struct Node *newNode(int key) 
 { 
 	struct Node *temp = 
