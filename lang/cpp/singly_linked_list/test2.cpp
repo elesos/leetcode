@@ -97,7 +97,7 @@ int main()
 	head->next->next->next->next = newNode(5); 
 
 	/* Create a loop for testing */
-	head->next->next->next->next->next = head->next; 
+	head->next->next->next->next->next = head->next->next; 
 
 	cout << countNodesinLoop2(head) << endl; 
 
