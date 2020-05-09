@@ -387,3 +387,64 @@ int GetNth(Node *head,int n)
     // head to next pointer  
     return GetNth(head->next, n-1);  
 } 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+//从后面开始数，返回第n个元素
+/* Function to get the nth node from the last of a linked list*/
+void printNthFromLast(Node* head, int n) 
+{ 
+    int len = 0; 
+    Node* temp = head; 
+  
+    // count the number of nodes in Linked List 
+    while (temp != NULL) { 
+        temp = temp->next; 
+        len++; 
+    } 
+  
+    // check if value of n is not 
+    // more than length of the linked list 
+    if (len < n) 
+        return; 
+  
+    temp = head; 
+  
+    // get the (len-n+1)th node from the beginning 
+    for (int i = 1; i < len - n + 1; i++) 
+        temp = temp->next; 
+  
+    cout << temp->data; 
+  
+    return; 
+} 
+
+//打中间元素，如果是奇数个，返回 second middle element. 1->2->3->4->5->6 then output should be 4.
+/* Function to get the middle of the linked list*/
+void printMiddle(Node *head)  
+{  
+    Node *slow_ptr = head;  
+    Node *fast_ptr = head;  
+  
+    if (head!=NULL)  
+    {  
+        while (fast_ptr != NULL && fast_ptr->next != NULL)  
+        {  
+            fast_ptr = fast_ptr->next->next;  
+            slow_ptr = slow_ptr->next;  
+        }  
+        printf("The middle element is [%d]\n\n", slow_ptr->data);  
+    }  
+}  
