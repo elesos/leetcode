@@ -33,11 +33,11 @@ void push(struct Node** head_ref, int new_data)
 	as arguments and return data at index*/
 int GetNth(struct Node *head,int n) 
 { 
-	int count = 1; 
+	int count = 0; 
 	
 	//if count equal too n return node->data 
 	if(count == n) 
-	return head->data; 
+		return head->data; 
 	
 	//recursively decrease n and increase 
 	// head to next pointer 
@@ -59,6 +59,6 @@ int main()
 	push(&head, 1); 
 	
 	/* Check the count function */
-	printf("Element at index 3 is %d", GetNth(head, 3)); 
+	printf("Element at index 3 is %d\n", GetNth(head, 3)); 
 	getchar(); 
 } 
