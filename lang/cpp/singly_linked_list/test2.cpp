@@ -1,6 +1,7 @@
 // C++ program to count number of nodes 
 // in loop in a linked list if loop is 
 // present 
+#include <iostream>
 #include<bits/stdc++.h> 
 using namespace std; 
 
