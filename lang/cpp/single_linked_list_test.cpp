@@ -122,7 +122,7 @@ void printList(struct node *ptr)
 		printf("%d->", ptr->data); 
 		ptr = ptr->next; 
 	} 
-	printf("NULL\n"); 
+	//printf("NULL\n"); 
 } 
 
 
