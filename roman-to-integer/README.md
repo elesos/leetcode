@@ -48,3 +48,10 @@ C 可以放在 D (500) 和 M (1000) 的左边，来表示 400 和 900。
 
 ```
 ## 思路
+https://github.com/kdn251/interviews/blob/e8a47218c2c0be29f79cd8f630231d817cbed2fc/leetcode/string/RomanToInteger.java
+https://github.com/myforkers/leetcode/blob/master/algorithms/cpp/romanToInteger/romanToInteger.cpp
+
+去掉最后一个元素后，其它用对比
+如果左边小于右边。就减去左边的值，否则就加对应的值
+
+最后在加上最后一个元素的值
