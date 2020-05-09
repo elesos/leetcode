@@ -2,6 +2,7 @@
 // in loop in a linked list if loop is 
 // present 
 #include <iostream>
+#include <unordered_map> 
 #include<bits/stdc++.h> 
 using namespace std; 
 
@@ -52,7 +53,7 @@ int countNodesinLoop(struct Node *list)
 int countNodesinLoop2(struct Node *h) 
 { 
 	
-	unordered_set<Node*, int> s; 
+	unordered_map<struct Node*, int> s; 
 	int index = 0;
     while (h != NULL) { 
         // If this node is already present 
@@ -67,8 +68,8 @@ int countNodesinLoop2(struct Node *h)
   
         // If we are seeing the node for 
         // the first time, insert it in hash 
-        s.insert({h, index++}); 
-  
+        s.insert({h, index}); 
+		index++;
         h = h->next; 
     } 
   

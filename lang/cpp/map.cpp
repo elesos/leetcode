@@ -82,7 +82,7 @@ int main()
 	// initialize container 
 	multimap<int, int> mp; 
 
-	// insert elements in random order 
+	// insert elements in random order , ÈÔ»á°´keyÅÅĞò
 	mp.insert({ 2, 30 }); 
 	mp.insert({ 1, 40 }); 
 	mp.insert({ 3, 20 }); 
