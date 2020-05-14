@@ -41,9 +41,9 @@ function get_authKey(appid, secret, userid){
                function(err, res, body){
                  if(err){
                    return reject(err);
-		 }else{
-		   return resolve(body);
-		 }
+				 }else{
+				   return resolve(body);
+				 }
                }
               ); 
   }    
@@ -59,17 +59,20 @@ router.get('/eventCenter', async (ctx, next) => {
     return;
   }
   console.log('sign=' + sign);
+  
   var signature = generateSign(data, guardToken);
-  console.log('signature=' + signature);
+  console.log('signature=' + signature);  
   if(sign !== signature){
     ctx.response.body = echo_0('invalid sign');
     return;
   }	
+  
   json_obj = JSON.parse(data);
   if('AEC_ACCESS_VALIDATION' === json_obj.action){
     ctx.response.body = echo_1(json_obj.echostr);
     return;  
   }
+  
   if('AEC_GROUP_CREATE' === json_obj.action){
     var groupId = 10010;
     ctx.response.body = echo_1(groupId);

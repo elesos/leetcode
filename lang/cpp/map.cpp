@@ -473,7 +473,7 @@ int main()
 	cout << gquiz1.lower_bound(5)->first << '\t'; 
 	cout << "\tELEMENT = " << gquiz1.lower_bound(5)->second << endl; 
 	
-	cout << "gquiz1.upper_bound(5) : " << "\tKEY = "; //返回比它大的
+	cout << "gquiz1.upper_bound(5) : " << "\tKEY = "; //不是返回比它大的，应该是返回它后面一个
 	cout << gquiz1.upper_bound(5)->first << '\t'; 
 	cout << "\tELEMENT = " << gquiz1.upper_bound(5)->second << endl; 
 
