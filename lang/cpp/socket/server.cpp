@@ -25,8 +25,9 @@ int main(){
     //接收客户端请求
     struct sockaddr_in clnt_addr;
     socklen_t clnt_addr_size = sizeof(clnt_addr);
+    cout<< "accept..."<<endl;
     int clnt_sock = accept(serv_sock, (struct sockaddr*)&clnt_addr, &clnt_addr_size); //程序运行到 accept() 函数就会被阻塞，等待客户端发起请求
-
+    cout<< "send data to client"<<endl;
     //向客户端发送数据
     char str[] = "Hello World!";
     write(clnt_sock, str, sizeof(str));
