@@ -2,11 +2,13 @@
 #include <string.h>
 #include <stdlib.h>
 #include <unistd.h>
+
 #include <arpa/inet.h>
 #include <sys/socket.h>
 
 int main(){
     //创建套接字
+    //设为 0，系统会自动推演出应该使用什么协议,是tcp还是udp
     int sock = socket(AF_INET, SOCK_STREAM, 0);
 
     //向服务器（特定的IP和端口）发起请求
@@ -19,9 +21,10 @@ int main(){
    
     //读取服务器传回的数据
     char buffer[40];
+    //从套接字中读取数据
     read(sock, buffer, sizeof(buffer)-1);
    
-    printf("Message form server: %s\n", buffer);
+    printf("Message form server: [%s]\n", buffer);
    
     //关闭套接字
     close(sock);
